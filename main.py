@@ -1,9 +1,10 @@
 import streamlit as st
 
 import RelativityApp as RELapp
-# import Euler as EULapp
+import EulerApp as EULapp
 # import EulerIdentitiy as EULIDapp
-# import Quadratic as QUAapp
+import QuadraticApp as QUAapp
+import Quadratic2App as QUA2app
 # import QuadraticEq as QUAEQapp
 
 st.write("# Math Formula App")
@@ -17,6 +18,16 @@ if app == options[0]:
     st.error("Something went wrong in Relativity App")
 elif app == options[1]:
   try:
-    EULIDapp.EulerIdentityApp()
+    EULapp.Euler()
   except:
     st.error("Something went wrong in Euler identity App")
+elif app == options[2]:
+  try:
+    QUAapp.Quadratic()
+  except:
+    st.error("Something went wrong in Quadratic App")
+elif app == options[3]:
+  try:
+    QUA2app.Quadratic()
+  except:
+    st.error("Something went wrong in Quadratic 2 App")

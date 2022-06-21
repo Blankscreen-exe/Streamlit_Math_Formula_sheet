@@ -6,10 +6,8 @@
 def f(x , y):
     return x + y 
 
-def euler():
-    x = float(input("Enter value of x (x < y)"))
-    y = float(input("Enter value of y (y > x) "))
-    b = float(input("Enter value of b (step size)"))
+def euler(x,y,b):
+
     n = 5
     h = (b - x)/n
 
@@ -21,6 +19,5 @@ def euler():
 
     for i in range(len(arrX) - 1):
         arrY.append(arrY[len(arrY) - 1] + (h * f(arrX[i] , arrY[i])))
-    print(arrY)
+    return arrY
 
-euler()    
